@@ -1,0 +1,357 @@
+/* 模板的样式 */
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    color: #000000;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ahi4vn');
+    src: url('fonts/icomoon.eot?ahi4vn#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ahi4vn') format('truetype'),
+        url('fonts/icomoon.woff?ahi4vn') format('woff'),
+        url('fonts/icomoon.svg?ahi4vn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ahi4vn');
+    src: url('fonts/icomoon.eot?ahi4vn#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ahi4vn') format('truetype'),
+        url('fonts/icomoon.woff?ahi4vn') format('woff'),
+        url('fonts/icomoon.svg?ahi4vn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+.main {
+    background-image: linear-gradient(pink, white);
+}
+
+.header {
+    /* position: relative; */
+    position: fixed;
+    z-index: 100000000;
+    width: 100% !important;
+    background-color: pink;
+    box-sizing: border-box;
+    top: 0;
+    border: none;
+}
+
+.container {
+    max-width: 1040px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    padding: auto;
+    margin: auto;
+    /* margin-left: auto; */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: auto;
+}
+
+.logo {
+    margin: .7rem .7rem;
+    margin-right: 20px;
+}
+
+.logo a {
+    font-family: fantasy;
+    font-size: 28px;
+    display: flex;
+    text-decoration: none;
+}
+
+.search_box {
+    position: relative;
+    height: 30px;
+    width: 182px;
+
+    /* background-color: pink; */
+    /* line-height: 1.2; */
+    margin: 15px;
+    display: flex;
+}
+
+.search_box_input {
+    border-color: pink;
+    text-shadow: none;
+    padding: 15px 5px;
+    /* background-color: pink; */
+    height: 20px;
+    font-size: 14px;
+    border-radius: 18px;
+    outline: none;
+    /* margin: 15px; */
+}
+
+.search_box_btn {
+    position: absolute;
+    font-family: "icomoon";
+    padding: 2px 14px 0 10px;
+    border-left: 1px solid black;
+    left: 145px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.search_box_btn::after {
+    content: "\e986";
+}
+
+.container1 {
+    display: flex;
+    max-width: 1040px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    padding: auto;
+    margin: auto;
+}
+
+.header_main {
+    /* position: relative; */
+    /* background-color: pink; */
+    /* position: relative; */
+    height: 40px;
+}
+
+/* .header_main .weather{
+    position: absolute; */
+/* } */
+
+.header_main .recent_tip {
+    padding: 0 18px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.header_main .recently {
+    /* position: absolute; */
+    display: flex;
+}
+
+.header_main .recently li {
+    list-style-type: none;
+    padding-left: 190px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.header_main .recently .weather {
+    text-decoration: none;
+}
+
+.banner {
+    width: 1080px;
+    display: flex;
+    /* background-color: cornflowerblue; */
+    margin: 0 auto;
+}
+
+.timeweather {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 1080px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.temp {
+    display: flex;
+}
+
+
+.timeweather #number {
+    height: 100%;
+    /* width: 150px; */
+    font-size: 100px;
+    margin: 50px 20px 30px 30px;
+    /* padding: 10px; */
+}
+
+
+.timeweather #text {
+    height: 60%;
+    font-size: 40px;
+    padding-top: 85px;
+    margin-right: 20px;
+    padding-left: 20px;
+    /* padding: 10px; */
+}
+
+.timeweather .current {
+    display: flex;
+    justify-content: space-between;
+    height: 84px;
+    line-height: 84px;
+    margin-top: 30px;
+    padding: 0 24px;
+    border-radius: 12px;
+    /* background-color: chocolate; */
+
+    padding-top: 22px;
+}
+
+.timeweather .current_item {
+    /* font-size: 1rem; */
+    font-weight: 400;
+    color: #212529;
+    text-align: left;
+    /* line-height: 84px; */
+    white-space: nowrap;
+}
+
+.timeweather .current_item p {
+    font-size: 18px;
+    /* padding: 40px; */
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.predict_24 {
+    width: 1080px;
+    margin: 0 auto;
+    height: 480px;
+    /* background-color: plum; */
+}
+
+.predict_24 .title {
+    padding-top: 60px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+}
+
+
+.predict_shape {
+    margin: 10px 20px 5px;
+    /* height: 170px; */
+}
+
+.predict_shape_box {
+    position: relative;
+    width: 1040px;
+    height: 290px;
+    /* background-color: deeppink; */
+    border-width: 0px;
+    cursor: default;
+}
+
+.weather_icon {
+    display: flex;
+    justify-content: space-between;
+    width: 1070px;
+    margin: 0 auto;
+    padding: 10px 110px;
+    position: absolute;
+    /* background-color: fuchsia; */
+    height: 70px;
+}
+
+.weather_icon i {
+    width: 50px;
+    height: 50px;
+    /* display: block; */
+    font-size: 40px;
+    /* background-color: salmon; */
+}
+
+/* .weather_icon i::after {
+    content: "";
+    background-image: url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill='%23FF843F' class="qi-100-fill" viewBox="0 0 16 16"><path d="M8.005 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm.004-.997a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 1 1 0v1.5a.5.5 0 0 1-.5.5ZM3.766 4.255a.498.498 0 0 1-.353-.147l-1.062-1.06a.5.5 0 0 1 .707-.707L4.122 3.4a.5.5 0 0 1-.355.854v.001ZM2.004 8.493h-1.5a.5.5 0 1 1 0-1h1.5a.5.5 0 1 1 0 1Zm.691 5.303a.5.5 0 0 1-.354-.854l1.062-1.06a.5.5 0 0 1 .708.707l-1.063 1.06a.497.497 0 0 1-.353.147Zm5.301 2.201a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 1 1 0v1.5a.5.5 0 0 1-.5.5Zm5.304-2.191a.496.496 0 0 1-.353-.147l-1.06-1.06a.5.5 0 1 1 .706-.707l1.06 1.06a.5.5 0 0 1-.353.854Zm2.203-5.299h-1.5a.5.5 0 0 1 0-1h1.5a.5.5 0 1 1 0 1ZM12.25 4.265a.5.5 0 0 1-.354-.854l1.06-1.06a.5.5 0 1 1 .708.707l-1.06 1.06a.498.498 0 0 1-.354.147Z"/></svg>");
+    background-repeat: no-repeat;
+} */
+
+.forecast_7 {
+    /* display: flex; */
+    margin: 0 auto;
+    width: 1040px;
+}
+
+.forecast_7 h4 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.life_index {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+
+
+.life_index h3 {
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+.life {
+    margin: 0 auto;
+    width: 1050px;
+    margin-top: 40px;
+}
+
+.life_container {
+    /* margin-top: 20px; */
+    /* width: 925px; */
+    /* padding: 10px; */
+    display: grid;
+    grid-template-columns: repeat(5, 13%);
+    grid-template-rows: repeat(2, 50%);
+    row-gap: 20px;
+    justify-content: space-evenly;
+}
+
+.life_box {
+    /* background-color: lightblue; */
+    position: relative;
+    width: 140px;
+    height: 140px;
+    transition: all 1s;
+
+}
+
+.life_container li{
+    list-style: none;
+
+}
+
+.close {
+    display: block;
+    width: 140px;
+    height: 140px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.information {
+    position: absolute;
+    top: 45px;
+    padding: 5px;
+    font-size: 14px;
+}
+

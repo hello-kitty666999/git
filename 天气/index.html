@@ -1,0 +1,230 @@
+<!-- todo: 天气页面模板 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./dependencies/echarts.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/qweather-icons@1.3.3/font/qweather-icons.css" rel="stylesheet">
+
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="qi-307-fill" viewBox="0 0 16 16">
+        <path d="M1 12.5a1 1 0 1 0 2 0c0-.5-.555-1.395-1-2-.445.605-1 1.5-1 2ZM5 15a1 1 0 1 0 2 0c0-.5-.555-1.395-1-2-.445.605-1 1.5-1 2Zm4.293.707A1 1 0 0 1 9 15c0-.5.555-1.395 1-2 .445.605 1 1.5 1 2a1 1 0 0 1-1.707.707ZM13 12.5a1 1 0 0 0 2 0c0-.5-.555-1.395-1-2-.445.605-1 1.5-1 2Zm-1.273-4.283A4.99 4.99 0 0 1 7.9 10a4.988 4.988 0 0 1-3.773-1.719 3 3 0 1 1-.586-5.732A4.998 4.998 0 0 1 7.9 0a4.999 4.999 0 0 1 4.38 2.587 3 3 0 1 1-.553 5.63Z"/>
+    </svg> -->
+</head>
+
+<body>
+    <!-- 主模板，展示天气 -->
+    <div class="main">
+        <div class="header">
+            <div class="container">
+                <div class="content">
+                    <div class="logo">
+                        <a href="">天气预报</a>
+                    </div>
+                    <div class="search_box">
+                        <input type="text" placeholder="搜索城市" class="search_box_input" value="">
+                        <button class="search_box_btn" id="input">
+
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="header_main">
+            <!-- <div class="container1">
+                <div class="recent_tip">最近</div>
+                <div class="weather">
+                    <ul class="recently">
+                        <li>
+                            <a href="" class="weather" target="_blank">
+                                <img src="" alt="">
+                                天气
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="weather" target="_blank">
+                                <img src="" alt="">
+                                天气
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="weather" target="_blank">
+                                <img src="" alt="">
+                                天气
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="banner">
+            <div class="timeweather">
+                <div class="temp">
+                    <p id="number"></p>
+                    <p id="text"></p>
+
+                </div>
+                <div class="current">
+                    <div class="current_item_1">
+                        <p id="current_item_1_1"></p>
+                        <p id="current_item_1_2"></p>
+                    </div>
+                    <div class="current_item_2">
+                        <p>相对湿度</p>
+                        <p id="current_item_2_2"></p>
+                    </div>
+                    <div class="current_item_3">
+                        <p>大气压强</p>
+                        <p id="current_item_3_2"> 4</p>
+                    </div>
+                    <div class="current_item_4">
+                        <p>累计降水量</p>
+                        <p id="current_item_4_2"></p>
+                    </div>
+                    <div class="current_item_5">
+                        <p>PM2.5含量</p>
+                        <p id="current_item_5_2"></p>
+                    </div>
+                    <!-- <div class="current_item_6">
+                        <p>北风</p>
+                        <p>2级</p>
+                    </div>
+                    <div class="current_item_7">
+                        <p>北风</p>
+                        <p>2级</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="predict">
+            <div class="predict_24">
+                <h4 class="title">24小时天气预报</h4>
+                <div class="predict_shape">
+                    <div class="predict_shape_box"></div>
+                    <div class="weather_icon">
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                        <i class="tianqi"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast_7">
+            <h4>七天天气预报</h4>
+            <div class="forecast_7_shape">
+                <div class="forecast_7_box"></div>
+            </div>
+        </div>
+
+
+
+
+        <!-- 生活指数板块 -->
+        <div class="life_index">
+            <h3>生活指数</h3>
+            <div class="life">
+                <ul class="life_container">
+
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    
+                        
+                    </li>
+
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="life_box">
+                            <div class="close">天气指数</div>
+                            <div class="information"></div>
+                        </div>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<!-- 模板结束 -->
+<script src="utils.js"></script>
+<script src="index.js"></script>
+<script src="xhr.js"></script>
+
+
+</html>
